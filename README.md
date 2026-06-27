@@ -52,11 +52,17 @@ Beide Optionen können parallel laufen, schadet nix.
 - Invite schicken → im anderen Fenster taucht die Einladung auf → annehmen → beide landen automatisch im Game Room
 
 ## Aktueller Stand
-- Login/Register ✅
+- Login/Register — **nur Username + Passwort** ✅ (kein Email-Feld mehr)
 - Online-Status live ✅
 - Invite-System ✅
 - 1 Spiel eingebaut: **Tic-Tac-Toe** (synced live über Firestore)
 - Admin Panel mit Kill-Switch ✅
+- Design: dark theme im Illegalo-Stil (Inter Font, Indigo/Amber/Grün Akzente, Caveat-Signatur unten links, Versionsnummer unten rechts)
+
+## Wieso "Email" in der Firebase Console steht, obwohl es kein Email-Feld gibt
+Firebase Auth braucht technisch immer eine Email. Der Username wird deshalb im Hintergrund automatisch zu
+`username@mpgames.local` gemacht (sieht man nur in der Firebase Console unter Authentication, nie für den User selbst).
+Das heißt auch: Usernamen müssen einzigartig sein — ist einer schon vergeben, bekommt man "Dieser Username ist schon vergeben."
 
 ## Admin-Zugriff einrichten (damit der Kill-Switch funktioniert)
 Nur Accounts mit `isAdmin: true` auf ihrem User-Dokument dürfen den Server an-/ausschalten.
