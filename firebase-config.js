@@ -15,7 +15,7 @@ const firebaseConfig = {
   measurementId: "G-0WM9GXQ0DN",
   // You need to add this yourself: Firebase Console -> Realtime Database -> create database
   // -> copy the URL it gives you (looks like https://multiplayer-games-163ee-default-rtdb.<region>.firebasedatabase.app)
-    databaseURL: "https://multiplayer-games-163ee-default-rtdb.europe-west1.firebasedatabase.app"
+    databaseURL: "https://multiplayer-games-163ee-default-rtdb.europe-west1.firebasedatabase.app",
 };
 
 export const app = initializeApp(firebaseConfig);
